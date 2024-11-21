@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños Mi Pollito!</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+
+
+    <!-- Hero Section with Multiple Background Images -->
+    <section class="hero">
+        <div class="background-images">
+            <div class="img1"></div>
+            <div class="img2"></div>
+            <div class="img3"></div>
+        </div>
+        <div>
+            <h1>¡Feliz Cumpleaños Mi Pollito!</h1>
+            <p>Un día como hoy nació la mujer mas bonita del universo, mi curita al corazón.</p>
+        </div>
+    </section>
+
+    <!-- About Us Section with Parallax Effect -->
+    <section class="container mt-5 historia-parallax">
+        <h2 class="section-title">Para La Futura Doctora Más Inteligente Del Mundo</h2>
+        <p class="message-section">Desde que llegaste a este mundo lo hiciste con un solo propósito, hacerlo más bonito, llegaste e hiciste más bonita la vida de quienes te conocemos. Majito, mi cerebrito, quiero decirte que eres y siempre seras lo más importante que tengo, no me cabe duda de que en lo que hagas siempre destacarás, ERES LA MEJOR, y se que dios guiara tu camino de manera más bonita posible. Te Amo Mucho Con Bastante multiplicado Por infinito.</p>
+    </section>
+
+
+    <!-- Photo Gallery Section with Carousel -->
+    <section class="container mt-5">
+        <h2 class="section-title">Nuestros Bellos Clics</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="prevSlide()">&#10094;</button>
+            <div class="carousel-slide" id="carousel-slide">
+                <img src="images/5.jpeg" alt="Foto juntos 1">
+                <img src="images/6.jpeg" alt="Foto juntos 2">
+                <img src="images/7.jpeg" alt="Foto juntos 3">
+                <img src="images/8.jpeg" alt="Foto juntos 4">
+                <img src="images/9.jpeg" alt="Foto juntos 4">
+                <img src="images/10.jpeg" alt="Foto juntos 4">
+                <img src="images/11.jpeg" alt="Foto juntos 4">
+                <img src="images/12.jpeg" alt="Foto juntos 4">
+                <img src="images/13.jpeg" alt="Foto juntos 4">
+                <img src="images/14.jpeg" alt="Foto juntos 4">
+                <img src="images/15.jpeg" alt="Foto juntos 4">
+                <img src="images/16.jpeg" alt="Foto juntos 4">
+                <img src="images/17.jpeg" alt="Foto juntos 4">
+            </div>
+            <button class="carousel-btn right" onclick="nextSlide()">&#10095;</button>
+        </div>
+        <div class="carousel-indicators" id="carousel-indicators"></div>
+    </section>
+    
+
+    <section class="container mt-5 tipos-mi-bb">
+        <h2 class="section-title">Tipos De Mi Pollito</h2>
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="images/t1.jpeg" alt="Tipo 1">
+                <p>Pollito Dragona</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/t2.jpeg" alt="Tipo 2">
+                <p>Pollito Dormilona</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/t3.jpeg" alt="Tipo 3">
+                <p>Pollito Chef</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/t4.jpeg" alt="Tipo 4">
+                <p>Pollito Doctora</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/t5.jpeg" alt="Tipo 5">
+                <p>Pollito Engreída</p>
+            </div>
+            <div class="photo-item">
+                <img src="images/t6.jpeg" alt="Tipo 6">
+                <p>Pollito Motociclista</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer Section -->
+    <footer class="footer mt-5">
+        <h2>De quien más Te ama, tú tefo</h2>
+        <p>❤️</p>
+    </footer>
+
+    <script src="./js/carrusel.js"></script>
+    <script src="./js/parallax.js"></script>
+
+<!-- Audio de fondo xd -->
+<audio id="background-music" src="audio/amor.mp3" autoplay loop></audio>
+
+<script>
+    // Función para iniciar la música
+    function startMusic() {
+        const audio = document.getElementById('background-music');
+        audio.play().catch(error => {
+            console.log("El navegador bloqueó la reproducción automática.");
+        });
+        // Remueve el evento para que no se llame múltiples veces
+        document.removeEventListener('click', startMusic);
+    }
+
+    // Detecta la primera interacción del usuario para iniciar la música
+    document.addEventListener('click', startMusic);
+</script> 
+
+
+</body>
+</html>
